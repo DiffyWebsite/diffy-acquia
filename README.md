@@ -8,6 +8,8 @@ More on Acquia cloud hooks: https://docs.acquia.com/acquia-cloud/develop/api/clo
 
 Diffy project: https://diffy.website
 
+Video tutorial: https://youtu.be/wOuB8tRNNYw
+
 ## Installation notes
 
 You would need to have a project created in Diffy (need its ID). Also you need to provide API key so script can authenticate. 
