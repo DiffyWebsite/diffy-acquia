@@ -49,7 +49,7 @@ switch ($target_env) {
 print "Getting access token from the key." . PHP_EOL;
 $ch = curl_init();
 $curl_opts = [
-  CURLOPT_URL => 'https://diffy.website/api/auth/key',
+  CURLOPT_URL => 'https://app.diffy.website/api/auth/key',
   CURLOPT_HTTPHEADER => [
     'Accept: application/json',
     'Content-Type: application/json',
@@ -83,7 +83,7 @@ $token = $curl_response->token;
 print 'Starting compare job.';
 $ch = curl_init();
 $curl_opts = [
-  CURLOPT_URL => 'https://diffy.website/api/projects/' . DIFFY_PROJECT_ID . '/compare',
+  CURLOPT_URL => 'https://app.diffy.website/api/projects/' . DIFFY_PROJECT_ID . '/compare',
   CURLOPT_HTTPHEADER => [
     'Accept: application/json',
     'Content-Type: application/json',
@@ -112,4 +112,4 @@ $curl_response = json_decode($curl_response);
 curl_close($ch);
 
 print 'Compare job has started.' . PHP_EOL;
-print 'Check out the result here: https://diffy.website/ui#/diffs/' . str_replace('diff: ', '', $curl_response) . PHP_EOL;
+print 'Check out the result here: https://app.diffy.website/ui#/diffs/' . str_replace('diff: ', '', $curl_response) . PHP_EOL;
