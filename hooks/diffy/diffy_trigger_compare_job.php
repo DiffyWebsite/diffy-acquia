@@ -80,7 +80,7 @@ curl_close($ch);
 
 $token = $curl_response->token;
 
-print 'Starting compare job.';
+print 'Starting compare job.' . PHP_EOL;
 $ch = curl_init();
 $curl_opts = [
   CURLOPT_URL => 'https://app.diffy.website/api/projects/' . DIFFY_PROJECT_ID . '/compare',
@@ -112,4 +112,4 @@ $curl_response = json_decode($curl_response);
 curl_close($ch);
 
 print 'Compare job has started.' . PHP_EOL;
-print 'Check out the result here: https://app.diffy.website/ui#/diffs/' . str_replace('diff: ', '', $curl_response) . PHP_EOL;
+print 'Check out the result here: https://app.diffy.website/#/diffs/' . str_replace('diff: ', '', $curl_response) . PHP_EOL;
