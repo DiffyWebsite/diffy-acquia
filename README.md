@@ -1,8 +1,10 @@
 # Diffy Acquia cloud hooks integration
 
-Automates triggering "compare" job for your Acquia project whenever you do deployment.
+Automates triggering "compare" job for your Acquia project whenever you do a
+deployment.
 
-If you do deployment to "dev" or "test" environments this script triggers job to compare dev/test with prod.
+If you do a deployment to "dev" or "test" environments this script triggers a 
+job to compare "dev"/"test" with "prod".
 
 More on Acquia cloud hooks: https://docs.acquia.com/acquia-cloud/develop/api/cloud-hooks/
 
@@ -12,6 +14,8 @@ Video tutorial: https://youtu.be/wOuB8tRNNYw
 
 ## Installation notes
 
-You would need to have a project created in Diffy (need its ID). Also you need to provide API key so script can authenticate. 
+You would need to have a project created in Diffy (need its ID). Also you need 
+to provide API key so the script can authenticate.
 
-Please provide these details https://github.com/DiffyWebsite/diffy-acquia/blob/master/hooks/diffy/diffy_trigger_compare_job.php.
+Provide these details either as `DIFFY_API_KEY` and `DIFFY_PROJECT_ID` 
+environment variables or update [diffy_trigger_compare_job.php](hooks/diffy/diffy_trigger_compare_job.php) file.
